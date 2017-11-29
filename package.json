@@ -1,0 +1,25 @@
+{
+  "name": "front-end-lessons",
+  "version": "1.0.0",
+  "description": "Front-end lessons of SSELab",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Hello World!\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xdsselab/front-end-lessons.git"
+  },
+  "keywords": [
+    "front-end",
+    "learning",
+    "lessons"
+  ],
+  "author": "SSELab Front-end Group",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xdsselab/front-end-lessons/issues"
+  },
+  "homepage": "https://github.com/xdsselab/front-end-lessons#readme"
+}
