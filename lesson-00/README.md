@@ -1,4 +1,4 @@
-# Lesson-00
+# Lesson-00 Warm Up
 
 ## 任务
 
@@ -21,10 +21,20 @@ note: 不得使用第三方库
 
 ### 基础知识
 
-- html
-- css
-- js
-- DOM
+- JavaScript(ES6)
+  - 定义常量
+    - `const number = 1`
+  - 定义变量
+    - `let count = 1`
+  - 箭头函数 
+    - `() => {}`
+  - 打印日志
+    - `console.log('Hello World!')`
+  - 遍历数组
+    - `array.forEach(item => console.log(item))`
+- 使用node提供的模块
+  - `require('http')`
+  - `require('url')`
 
 ### Git
 
@@ -71,20 +81,25 @@ node <file>
 ```
 
 ```js
-const http = require('http')
+const http = require('http');
 
-const port = 1308
-const hostname = '127.0.0.1'
+const hostname = '127.0.0.1';
+const port = 1308;
 
-http.createServer((req, res) => {
-  res.statusCode = 200
-  res.end('Hello World!')
-}).listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`)
-})
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World\n');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
 ```
 
 #### Reference
 
-- [cli](https://nodejs.org/api/cli.html)
+- [node-cli](https://nodejs.org/api/cli.html)
 - [getting-started-guide](https://nodejs.org/en/docs/guides/getting-started-guide/)
+- [http api docs](https://nodejs.org/dist/latest-v8.x/docs/api/http.html)
+- [url parse api docs](https://nodejs.org/dist/latest-v8.x/docs/api/url.html#url_url_parse_urlstring_parsequerystring_slashesdenotehost)
