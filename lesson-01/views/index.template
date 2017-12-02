@@ -1,0 +1,10 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <h2>{{content.head}}</h2>
+    <p>{{content.paragraph}}</p>
+  </body>
+</html>
