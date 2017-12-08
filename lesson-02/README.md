@@ -52,24 +52,33 @@
 - [简介](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499861493e7c35be5e0864769a2c06afb4754acc6000)
 
 ```js
-var request = new XMLHttpRequest(); // 新建XMLHttpRequest对象
+const request = new XMLHttpRequest(); // 新建XMLHttpRequest对象
+const data = '';
 
 request.onreadystatechange = function () { // 状态发生变化时，函数被回调
-    if (request.readyState === 4) { // 成功完成
-        // 判断响应结果:
-        if (request.status === 200) {
-            // 成功，通过responseText拿到响应的文本:
-            console.log(request.responseText);
-        } else {
-            // 失败，根据响应码判断失败原因:
-            console.log(request.status);
-        }
+  if (request.readyState === 4) { // 成功完成
+    // 判断响应结果:
+    if (request.status === 200) {
+      // 成功，通过responseText拿到响应的文本:
+      console.log(request.responseText);
     } else {
-        // HTTP请求还在继续...
+      // 失败，根据响应码判断失败原因:
+      console.log(request.status);
     }
+  } else {
+    // HTTP请求还在继续...
+  }
 }
 
 // 发送请求:
-request.open('GET', '/api/tasks');
-request.send();
+request.open('GET', '/api/todos', true);
+request.send(data);
+```
+
+### Event
+
+```js
+element.addEventListener('click', (e) => {
+  // event handler
+})
 ```

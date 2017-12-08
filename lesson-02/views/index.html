@@ -4,13 +4,31 @@
     <title>TODO List</title>
 
     <!-- import or define css here -->
-    <style></style>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <!-- implement your view here -->
-    <h2>TODO it</h2>
+    <section class="todo-app">
+      <header class="header">
+        <h1>todos</h1>
+        <input autofocus autocomplete="off" placeholder="What needs to be done?" class="new-todo" />
+      </header>
+      <section class="main">
+        <input type="checkbox" class="toggle-all"></input>
+        <ul class="todo-list">
+          <li class="todo" id="todo-template">
+            <div class="view">
+              <input type="checkbox" class="toggle"></input>
+              <label></label>
+              <button class="destroy"></button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <footer class="footer"></footer>
+    </section>
 
     <!-- import or define script here -->
-    <script></script>
+    <script src="index.js"></script>
   </body>
 </html>
